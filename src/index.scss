@@ -2,6 +2,8 @@
 @import "./styles/variables.scss";
 
 @import "bootstrap/scss/bootstrap";
+@import "./components/editor-box/editor-box.scss";
+@import "./styles/box.scss";
 
 body {
   font-family: sans-serif !important;

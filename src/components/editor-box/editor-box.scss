@@ -1,3 +1,17 @@
+.editor-container {
+  border: 2px solid black;
+}
+
 #editor {
   font-family: monospace;
+  height: 80vh;
+  @include media-breakpoint-down(lg) {
+    height: 30vh;
+  }
+}
+
+#editor.expanded {
+  @include media-breakpoint-down(lg) {
+    height: 80vh;
+  }
 }

@@ -3,7 +3,8 @@ import ReactDOM from "react-dom/client";
 import "./index.scss";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { ParseMdProvider } from "./services/parse-md.provider";
+import { ParseMdProvider } from "./services/parse-md/parse-md.provider";
+import { ExpandBoxProvider } from "./services/expand-box/expand- box.provider";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -11,7 +12,9 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <ParseMdProvider>
-      <App />
+      <ExpandBoxProvider>
+        <App />
+      </ExpandBoxProvider>
     </ParseMdProvider>
   </React.StrictMode>
 );

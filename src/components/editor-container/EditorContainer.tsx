@@ -1,6 +1,6 @@
-import { useState } from "react";
-import { useParseMd } from "../../services/use-parse-md";
+import { useParseMd } from "../../services/parse-md/use-parse-md";
 import { EditorBox } from "../editor-box/EditorBox";
+import { Toolbar } from "../toolbar/Toolbar";
 
 export const EditorContainer = () => {
   const parseMd = useParseMd();
@@ -10,8 +10,8 @@ export const EditorContainer = () => {
   };
 
   return (
-    <div className="p-3">
-      <h1 className="mb-3">Editor</h1>
+    <div className="m-3 shadow-box">
+      <Toolbar title="Editor"></Toolbar>
       <EditorBox mdText={parseMd?.mdText} onChange={onChange} />
     </div>
   );

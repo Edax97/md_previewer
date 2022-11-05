@@ -1,4 +1,5 @@
 import "./preview-area.scss";
+import html from "react-inner-html";
 
 interface PropsType {
   renderedHTML: string | undefined;
@@ -6,8 +7,10 @@ interface PropsType {
 
 export const PreviewArea = (props: PropsType) => {
   return (
-    <div id="preview">
-      <div dangerouslySetInnerHTML={{ __html: props.renderedHTML || "" }}></div>
-    </div>
+    <div
+      id="preview"
+      className="px-3 px-lg-5 py-4 bg-secondary"
+      {...html(props.renderedHTML)}
+    ></div>
   );
 };
