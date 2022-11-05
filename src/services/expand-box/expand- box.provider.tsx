@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { createContext, useEffect, useState } from "react";
+import { createContext } from "react";
 import { ExpandBoxType } from "../../types/expand-box.type";
 
 export const ExpandBoxContext = createContext<ExpandBoxType | null>(null);

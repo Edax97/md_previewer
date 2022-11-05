@@ -22,6 +22,7 @@ export const ParseMdProvider = (props: any) => {
 
   useEffect(() => {
     render(state.mdText);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
